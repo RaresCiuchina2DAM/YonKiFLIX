@@ -33,11 +33,11 @@ class MainActivity : AppCompatActivity() {
 
         binding.Registro.setOnClickListener {
             if (binding.Email.text.toString().isNotEmpty() &&
-                binding.Contrasenya.text.toString().isNotEmpty()
+                binding.ContrasenyaEdittext.text.toString().isNotEmpty()
             ) {
                 FirebaseAuth.getInstance().signInWithEmailAndPassword(
                     binding.Email.text.toString(),
-                    binding.Contrasenya.text.toString()
+                    binding.ContrasenyaEdittext.text.toString()
                 )
                     .addOnCompleteListener {
                         if (it.isSuccessful) {
@@ -53,10 +53,10 @@ class MainActivity : AppCompatActivity() {
 
         binding.InicioSesion.setOnClickListener {
             if (binding.Email.text.toString().isNotEmpty() &&
-                binding.Contrasenya.text.toString().isNotEmpty()
+                binding.ContrasenyaEdittext.text.toString().isNotEmpty()
             ) {
                 FirebaseAuth.getInstance().signInWithEmailAndPassword(binding.Email.text.toString(),
-                    binding.Contrasenya.text.toString()
+                    binding.ContrasenyaEdittext.text.toString()
                 ).addOnCompleteListener {
                     if (it.isSuccessful) {
                         showHome(it.result?.user?.email ?: "", ProviderType.BASIC)
