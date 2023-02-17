@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "408280005081",
+    "project_id": "yonkiflix-88185",
+    "storage_bucket": "yonkiflix-88185.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:408280005081:android:1a14d3eb0de45f0f7ec1c8",
+        "android_client_info": {
+          "package_name": "com.example.yonkiflix"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "408280005081-t2uicjkertd4ahi2pkcb01o0rqiq8o2r.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBPoZxtJER8vBKyLtXITvQhABKA90RFTL4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "408280005081-t2uicjkertd4ahi2pkcb01o0rqiq8o2r.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
