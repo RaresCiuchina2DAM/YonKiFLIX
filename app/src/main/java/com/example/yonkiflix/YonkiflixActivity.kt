@@ -1,7 +1,9 @@
 package com.example.yonkiflix
 
+import android.app.Activity
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.TextView
 import com.example.yonkiflix.databinding.ActivityYonkiflixBinding
 
 
@@ -12,23 +14,24 @@ enum class  ProviderType {
 class YonkiflixActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        val binding = ActivityYonkiflixBinding.inflate(layoutInflater)
-        setContentView(binding.root)
+        setContentView(R.layout.activity_yonkiflix)
 
 
         //Setup
         val bundle = intent.extras
         val email = bundle?.getString("email")
         val provider = bundle?.getString("provider")
-        setup(email ?: "", provider ?: "")
-        //Buscar la id del textview y añadirle el email y el proveedor
-        binding.textView.text = email
-        binding.textView2.text = provider
-    }
 
-    private fun setup(email: String, provider: String) {
+        val email2= findViewById<TextView>(R.id.textView)
+        email2.text = email
 
-        title = "Inicio"
+        val a = findViewById<TextView>(R.id.textView2)
+        a.text = provider
+
+
+
+
+
 
 
     }

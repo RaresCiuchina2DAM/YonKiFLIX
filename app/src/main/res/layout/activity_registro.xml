@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#1a1d29"
+    tools:context=".RegistroActivity"
+
+    >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="240sp"
+        android:layout_marginTop="25sp"
+        android:layout_marginEnd="20sp"
+        android:fontFamily="times"
+        android:id="@+id/volver"
+        android:text="Volver a inicio de sesión"
+        android:textColor="@color/white"
+        android:textSize="11sp" />
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="3sp"
+        android:layout_marginStart="240sp"
+        android:layout_marginTop="40sp"
+        android:layout_marginEnd="20sp"
+        android:background="@color/white"
+        android:backgroundTint="@color/white" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="0sp"
+        android:layout_marginTop="-160sp"
+        android:layout_marginEnd="0sp"
+        android:src="@drawable/logo_sinfondotres" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="3sp"
+        android:layout_marginStart="20sp"
+        android:layout_marginTop="110sp"
+        android:layout_marginEnd="20sp"
+        android:background="@color/white"
+        android:backgroundTint="@color/white" />
+
+
+    <TextView
+        android:id="@+id/Escribetucorreo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20sp"
+        android:layout_marginTop="140sp"
+        android:layout_marginEnd="20sp"
+        android:fontFamily="times"
+        android:text="Escribe tu dirección de correo electrónico"
+        android:textColor="@color/white"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/utilizaras"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20sp"
+        android:layout_marginTop="205sp"
+        android:layout_marginEnd="20sp"
+        android:fontFamily="times"
+
+        android:text="Utilizaras esta dirección de correo para acceder"
+        android:textColor="#CCD1F3"
+        android:textSize="15sp" />
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        app:hintTextColor="@color/white"
+        android:layout_height="match_parent">
+
+        <EditText
+            android:id="@+id/introduceemail"
+            android:layout_width="match_parent"
+            android:layout_height="50sp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="20sp"
+            android:layout_marginTop="230sp"
+            android:layout_marginEnd="20sp"
+            android:layout_marginBottom="10sp"
+            android:autofillHints=""
+            android:textColorHint="@color/gris_claro"
+            android:background="#292F48"
+            android:fontFamily="times"
+            android:hint="Correo electrónico"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            android:inputType="textEmailAddress" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <TextView
+        android:id="@+id/Escribetucontrasenya"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20sp"
+        android:layout_marginTop="340sp"
+        android:layout_marginEnd="20sp"
+        android:fontFamily="times"
+        android:text="Escribe contraseña"
+        android:textColor="@color/white"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/utilizarascontrasenya"
+        android:layout_width="wrap_content"
+        android:layout_height="42dp"
+        android:layout_marginStart="20sp"
+        android:layout_marginTop="380sp"
+        android:layout_marginEnd="20sp"
+        android:fontFamily="times"
+        android:text="recuerda que la utilizarás para acceder y poder ver tus series y películas"
+        android:textColor="#CCD1F3"
+        android:textSize="15sp" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        app:hintTextColor="@color/white"
+        android:layout_height="match_parent">
+
+        <EditText
+            android:id="@+id/introducetucontrasenya"
+            android:layout_width="match_parent"
+            android:layout_height="50sp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="20sp"
+            android:layout_marginTop="440sp"
+            android:layout_marginEnd="20sp"
+            android:layout_marginBottom="10sp"
+            android:autofillHints=""
+            android:background="#292F48"
+            android:fontFamily="times"
+            android:hint="Contraseña"
+            android:textColorHint="@color/gris_claro"
+            android:inputType="textPassword"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <CheckBox
+        android:id="@+id/aceptoterminos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20sp"
+        android:layout_marginTop="515sp"
+        android:layout_marginEnd="20sp"
+        android:buttonTint="#EAEAEA"
+        android:text="Acepto los terminos y condiciones"
+        android:textColor="#EAEAEA"
+        android:textSize="15sp"
+        android:fontFamily="times"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="52sp"
+        android:layout_marginTop="555sp"
+        android:layout_marginEnd="20sp"
+        android:fontFamily="times"
+        android:text="Para ver los términos y condiciones haz click aquí"
+        android:textColor="#CCD1F3"
+        android:id="@+id/terminosycondiciones"
+        android:textSize="13sp" />
+
+    <Button
+        android:id="@+id/botonregistro"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20sp"
+        android:layout_marginTop="600sp"
+        android:layout_marginEnd="20sp"
+        android:layout_marginBottom="10sp"
+        android:backgroundTint="@color/design_default_color_error"
+        android:fontFamily="times"
+        android:text="Registrarse"
+        android:textColor="@color/white"
+        android:textSize="20sp" />
+
+
+</RelativeLayout>
+
