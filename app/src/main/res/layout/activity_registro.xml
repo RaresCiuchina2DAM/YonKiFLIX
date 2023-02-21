@@ -121,7 +121,7 @@
         android:layout_marginTop="380sp"
         android:layout_marginEnd="20sp"
         android:fontFamily="times"
-        android:text="recuerda que la utilizarás para acceder y poder ver tus series y películas"
+        android:text="Recuerda que la utilizarás para acceder y poder ver tus series y películas"
         android:textColor="#CCD1F3"
         android:textSize="15sp" />
 
