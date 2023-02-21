@@ -4,30 +4,96 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".xqexistimosActivity">
+    tools:context=".xqexistimosActivity"
+    android:background="@drawable/degradado1"
+    >
 
     <TextView
-        android:layout_width="343dp"
-        android:layout_height="74dp"
+        android:id="@+id/textView14"
+        android:layout_width="368dp"
+        android:layout_height="72dp"
         android:fontFamily="times"
-        android:text="¿De donde nace YonKiFlix?"
+        android:text="¿De donde nace                       ?"
         android:textColor="@color/black"
-        android:textSize="30sp"
+        android:textSize="25sp"
         android:textStyle="bold"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="31dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.627"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.068" />
 
     <ImageView
-        android:layout_width="91dp"
-        android:layout_height="71dp"
-        android:src="@drawable/yonkiflix_logo"
-        tools:layout_editor_absoluteX="288dp"
-        tools:layout_editor_absoluteY="31dp" />
+        android:id="@+id/imageView"
+        android:layout_width="243dp"
+        android:layout_height="179dp"
+        android:layout_marginTop="-50dp"
+        android:layout_marginEnd="-20dp"
+        android:src="@drawable/logo_sinfondo"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.936"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.048" />
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:id="@+id/textView12"
+        android:layout_width="349dp"
+        android:layout_height="100dp"
         android:fontFamily="times"
-        android:text="YonkiFlix nace"
+        android:lineSpacingMultiplier="1.3"
+        android:text="YonkiFlix nace de la necesidad de ver peliculas y series de forma gratuita, sin publicidad  y en un solo lugar, sin tener que estar buscando en diferentes paginas y aplicaciones. "
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.155" />
+
+    <TextView
+        android:id="@+id/textView15"
+        android:layout_width="349dp"
+        android:layout_height="182dp"
+        android:layout_marginTop="196dp"
+        android:fontFamily="times"
+        android:lineSpacingMultiplier="1.3"
+        android:text="Teniendo en cuenta la continua subida de precios de platformas como Netflix, Amazon Prime Video, HBO o Disney+. Además teniendo en cuenta el nuevo plan de Netflix tanto de introducir publicidad en su plan más economico, como la nueva normativa para no compartir cuenta familiar entre personas que no vivan en el mismo domicilio"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="349dp"
+        android:layout_height="156dp"
+        android:fontFamily="times"
+        android:lineSpacingMultiplier="1.3"
+        android:text="Con todo esto, YonkiFlix se convierte en una alternativa sin animo de lucro, para que todos podamos disfrutar de las peliculas y series que tanto nos gustan."
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.685" />
+
+    <Button
+        android:id="@+id/boton"
+        android:layout_width="349dp"
+        android:layout_height="40dp"
+        android:backgroundTint="@color/gris_claro"
+        android:fontFamily="times"
+        android:text="volver"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.795" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,9 +1,79 @@
-<androidx.constraintlayout.widget.ConstraintLayout
-
-    android:layout_height="match_parent"
+<RelativeLayout android:layout_width="match_parent"
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent">
-    
-    
-    
-</androidx.constraintlayout.widget.ConstraintLayout>
+    android:layout_height="match_parent"
+    android:background="@color/gris_oscuro">
+
+
+
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="-130dp"
+        android:src="@drawable/logo_sinfondotres" />
+
+    <TextView
+        android:id="@+id/Nombreusuario1"
+        android:layout_width="218dp"
+        android:layout_height="56dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="326dp"
+        android:layout_marginRight="100dp"
+        android:fontFamily="times"
+        android:gravity="center"
+        android:text="Nombre"
+        android:textColor="@color/white"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/nombreusuario2"
+        android:layout_width="218dp"
+        android:layout_height="53dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="524dp"
+        android:layout_marginRight="100dp"
+        android:fontFamily="times"
+        android:gravity="center"
+        android:text="Pepe_2001"
+        android:textColor="@color/white"
+        android:textSize="20sp" />
+
+    <ImageButton
+        android:id="@+id/botonimagen2"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="419dp"
+        android:layout_marginEnd="154dp"
+        android:background="@drawable/perfil1" />
+
+    <ImageButton
+        android:id="@+id/botonimagen1"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="223dp"
+        android:layout_marginRight="159dp"
+        android:background="@drawable/perfil1" />
+
+    <TextView
+        android:id="@+id/texto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="154dp"
+        android:layout_marginRight="0dp"
+        android:fontFamily="times"
+        android:gravity="center"
+        android:text="Elige tu perfil"
+        android:textColor="@color/white"
+        android:textSize="20sp" />
+
+</RelativeLayout>

@@ -156,8 +156,8 @@
             android:id="@+id/porqueexistimos"
             android:text="¿Porque existimos?"
             android:textColor="@color/gris_oscuro"
-            android:textSize="15sp">
-
+            android:textSize="15sp"
+            android:fontFamily="times">
         </TextView>
     </LinearLayout>
 

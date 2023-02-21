@@ -26,6 +26,7 @@ class LoginActivity : AppCompatActivity() {
                 ).addOnCompleteListener {
                     if (it.isSuccessful) {
                         val intent = Intent(this, MainActivity::class.java)
+                        intent.putExtra("email", binding.Email.text.toString())
                         startActivity(intent)
                         finish()
                     } else {
@@ -44,7 +45,11 @@ class LoginActivity : AppCompatActivity() {
             finish()
         }
 
-        binding.
+        binding.porqueexistimos.setOnClickListener {
+            val intent = Intent(this, xqexistimosActivity::class.java)
+            startActivity(intent)
+            finish()
+        }
     }
 
 }
