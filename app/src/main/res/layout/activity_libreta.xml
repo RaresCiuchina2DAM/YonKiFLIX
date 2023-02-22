@@ -3,181 +3,445 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:id="@+id/constraint"
     android:layout_height="match_parent"
     android:background="@color/black"
     tools:context=".LibretaActivity">
 
 
-    <ScrollView
-        android:id="@+id/scrollView2"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/barradearriba"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="16dp">
+        android:layout_marginBottom="5dp"
+        android:background="@drawable/botonsinfondo2"
+        app:layout_constraintBottom_toTopOf="@+id/scrollView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="412dp"
-            android:layout_height="508dp"
-            android:background="@drawable/avatar2"
-            tools:layout_editor_absoluteX="-2dp"
-            tools:layout_editor_absoluteY="33dp">
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:layout_marginStart="310sp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="18dp"
+            android:layout_marginBottom="7dp"
+            app:srcCompat="@drawable/iconobuscar" />
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="37dp"
+            android:layout_height="31dp"
+            android:layout_marginStart="350sp"
+            android:layout_marginTop="5sp"
+            android:layout_marginEnd="20sp"
+            android:layout_marginBottom="5sp"
+            app:srcCompat="@drawable/perfil2" />
+
+        <ImageView
+            android:id="@+id/imageView5"
+            android:layout_width="69dp"
+            android:layout_height="31dp"
+            android:layout_marginStart="20sp"
+            android:layout_marginTop="5sp"
+            app:srcCompat="@drawable/yxlogo" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="412dp"
+        android:layout_height="659dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/barradearriba"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
             <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/constraintLayout"
-                android:layout_width="409dp"
-                android:layout_height="511dp"
-                android:layout_marginTop="1dp"
-                android:layout_marginEnd="1dp"
-                android:background="@drawable/botonsinfondo"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/constraintLayout2">
+                android:layout_width="match_parent"
+                android:layout_height="508dp"
+                android:background="@drawable/avatar2"
+                tools:layout_editor_absoluteX="0dp"
+                tools:layout_editor_absoluteY="33dp">
 
-                <TextView
-                    android:id="@+id/btnSeriesTv"
-                    android:layout_width="121dp"
-                    android:layout_height="49dp"
-                    android:layout_marginStart="26dp"
-                    android:layout_marginTop="2dp"
-                    android:layout_marginBottom="328dp"
-                    android:background="@android:color/transparent"
-                    android:fontFamily="times"
-                    android:gravity="center"
-                    android:text="Series TV"
-                    android:textColor="@color/white"
-                    android:textSize="15sp"
-                    app:layout_constraintBottom_toTopOf="@+id/cardView2"
-                    app:layout_constraintEnd_toStartOf="@+id/btnPeliculas"
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/constraintLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="511dp"
+                    android:layout_marginTop="1dp"
+                    android:layout_marginEnd="1dp"
+                    android:background="@drawable/botonsinfondo"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <TextView
-                    android:id="@+id/btnPeliculas"
-                    android:layout_width="121dp"
-                    android:layout_height="49dp"
-                    android:layout_marginTop="2dp"
-                    android:layout_marginBottom="328dp"
-                    android:background="@android:color/transparent"
-                    android:fontFamily="times"
-                    android:gravity="center"
-                    android:text="Peliculas"
-                    android:textColor="@color/white"
-                    app:layout_constraintBottom_toTopOf="@+id/cardView2"
-                    app:layout_constraintEnd_toStartOf="@+id/SpinnerCategorias"
-                    app:layout_constraintStart_toEndOf="@+id/btnSeriesTv"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <Spinner
-                    android:id="@+id/SpinnerCategorias"
-                    android:layout_width="121dp"
-                    android:layout_height="49dp"
-                    android:layout_marginTop="2dp"
-                    android:layout_marginEnd="23dp"
-                    android:layout_marginBottom="328dp"
-                    android:background="@android:color/transparent"
-                    android:fontFamily="times"
-                    app:layout_constraintBottom_toTopOf="@+id/cardView2"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/btnPeliculas"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/cardView2"
-                    android:layout_width="146dp"
-                    android:layout_height="40sp"
-                    android:layout_marginTop="376dp"
-                    android:layout_marginEnd="140dp"
-                    app:cardCornerRadius="8dp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/btnSeriesTv">
-
+                    app:layout_constraintTop_toBottomOf="@+id/constraintLayout2">
 
                     <TextView
-                        android:layout_width="103dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="42sp"
-                        android:layout_marginTop="8sp"
-                        android:layout_marginBottom="12sp"
+                        android:id="@+id/btnSeriesTv"
+                        android:layout_width="121dp"
+                        android:layout_height="49dp"
+                        android:layout_marginStart="26dp"
+                        android:layout_marginTop="2dp"
+                        android:layout_marginBottom="328dp"
+                        android:background="@android:color/transparent"
                         android:fontFamily="times"
-                        android:text="Reproducir"
-                        android:textColor="@color/black"
-                        android:textSize="17sp" />
+                        android:gravity="center"
+                        android:text="Series TV"
+                        android:textColor="@color/white"
+                        android:textSize="15sp"
+                        app:layout_constraintBottom_toTopOf="@+id/cardView2"
+                        app:layout_constraintEnd_toStartOf="@+id/btnPeliculas"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/btnPeliculas"
+                        android:layout_width="121dp"
+                        android:layout_height="49dp"
+                        android:layout_marginTop="2dp"
+                        android:layout_marginBottom="328dp"
+                        android:background="@android:color/transparent"
+                        android:fontFamily="times"
+                        android:gravity="center"
+                        android:text="Peliculas"
+                        android:textColor="@color/white"
+                        app:layout_constraintBottom_toTopOf="@+id/cardView2"
+                        app:layout_constraintEnd_toStartOf="@+id/SpinnerCategorias"
+                        app:layout_constraintStart_toEndOf="@+id/btnSeriesTv"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.0" />
+
+
+                    <Spinner
+                        android:id="@+id/SpinnerCategorias"
+                        android:layout_width="121dp"
+                        android:layout_height="49dp"
+                        android:layout_marginTop="2dp"
+                        android:layout_marginEnd="23dp"
+                        android:layout_marginBottom="328dp"
+                        android:background="@android:color/transparent"
+                        android:fontFamily="times"
+                        app:layout_constraintBottom_toTopOf="@+id/cardView2"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/btnPeliculas"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.0" />
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cardView2"
+                        android:layout_width="146dp"
+                        android:layout_height="40sp"
+                        android:layout_marginTop="376dp"
+                        android:layout_marginEnd="140dp"
+                        app:cardCornerRadius="8dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/btnSeriesTv">
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="25sp"
+                            android:layout_marginStart="37sp"
+                            android:layout_marginTop="8sp"
+                            android:layout_marginBottom="12sp"
+                            android:fontFamily="times"
+                            android:text="Reproducir"
+                            android:textColor="@color/black"
+                            android:textSize="17sp"
+                            android:textStyle="bold" />
+
+                        <ImageView
+                            android:layout_width="30sp"
+                            android:layout_height="30sp"
+                            android:layout_marginStart="5sp"
+                            android:layout_marginTop="5sp"
+                            android:layout_marginEnd="8dp"
+                            android:layout_marginBottom="8dp"
+                            android:src="@drawable/playbuttonj" />
+
+                    </androidx.cardview.widget.CardView>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25sp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="5dp"
+                android:fontFamily="sans-serif-medium"
+                android:text="Volver a ver"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="110sp"
+                android:layout_marginStart="25sp"
+                android:layout_marginTop="0dp"
+                android:layout_marginEnd="25sp"
+                android:layout_marginBottom="10dp"
+                android:fillViewport="true"
+                android:scrollbars="none"
+
+                >
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
 
                     <ImageView
-                        android:layout_width="30sp"
-                        android:layout_height="30sp"
-                        android:layout_marginStart="5sp"
-                        android:layout_marginTop="5sp"
-                        android:layout_marginEnd="8dp"
-                        android:layout_marginBottom="8dp"
-                        android:src="@drawable/playbuttonj" />
+                        android:layout_width="100dp"
+                        android:layout_height="115dp"
+                        android:layout_marginStart="0sp"
+                        android:src="@drawable/aqnhqv" />
 
-                </androidx.cardview.widget.CardView>
-            </androidx.constraintlayout.widget.ConstraintLayout>
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="115dp"
+                        android:layout_marginStart="0sp"
+                        android:src="@drawable/CCAVM" />
 
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/constraintLayout2"
-                android:layout_width="410dp"
-                android:layout_height="40dp"
-                android:layout_marginEnd="2dp"
-                android:layout_marginBottom="1dp"
-                android:background="@drawable/botonsinfondo"
-                app:layout_constraintBottom_toTopOf="@+id/constraintLayout"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent">
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="115dp"
+                        android:src="@drawable/elpueblo" />
 
-                <ImageView
-                    android:id="@+id/imageView3"
-                    android:layout_width="21dp"
-                    android:layout_height="21dp"
-                    android:layout_marginTop="7dp"
-                    android:layout_marginEnd="18dp"
-                    android:layout_marginBottom="7dp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toStartOf="@+id/imageView4"
-                    app:layout_constraintHorizontal_bias="1.0"
-                    app:layout_constraintStart_toEndOf="@+id/imageView5"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="1.0"
-                    app:srcCompat="@drawable/iconobuscar" />
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="115dp"
+                        android:src="@drawable/machosalfa" />
 
-                <ImageView
-                    android:id="@+id/imageView4"
-                    android:layout_width="37dp"
-                    android:layout_height="31dp"
-                    android:layout_marginTop="1dp"
-                    android:layout_marginEnd="17dp"
-                    android:layout_marginBottom="3dp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.933"
-                    app:layout_constraintStart_toEndOf="@+id/imageView5"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="1.0"
-                    app:srcCompat="@drawable/perfil2" />
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="115dp"
+                        android:src="@drawable/futurama" />
 
-                <ImageView
-                    android:id="@+id/imageView5"
-                    android:layout_width="69dp"
-                    android:layout_height="31dp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.076"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@drawable/yxlogo" />
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="115dp"
+                        android:src="@drawable/losSimpsons" />
 
 
-            </androidx.constraintlayout.widget.ConstraintLayout>
+                </LinearLayout>
 
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
+            </HorizontalScrollView>
 
 
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25sp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="5dp"
+                android:fontFamily="sans-serif-medium"
+                android:text="Peliculas que quizás te gusten"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textStyle="bold" />
 
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="110sp"
+                android:layout_marginStart="25sp"
+                android:layout_marginTop="0dp"
+                android:layout_marginEnd="25sp"
+                android:layout_marginBottom="10dp"
+                android:fillViewport="true"
+                android:scrollbars="none"
+
+                >
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="115dp"
+                        android:layout_marginStart="0sp"
+                        android:src="@drawable/coco" />
+
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="115dp"
+                        android:layout_marginStart="0sp"
+                        android:src="@drawable/lossimpsons_peli" />
+
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="115dp"
+                        android:src="@drawable/avatar1" />
+
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="115dp"
+                        android:src="@drawable/avatar2" />
+
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="115dp"
+                        android:src="@drawable/toysstory1" />
+
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="115dp"
+                        android:src="@drawable/toyStory1" />
+
+
+                </LinearLayout>
+
+
+            </HorizontalScrollView>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25sp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="5dp"
+                android:fontFamily="sans-serif-medium"
+                android:text="Las 10 series más populares hoy en España"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="110sp"
+                android:layout_marginStart="25sp"
+                android:layout_marginTop="0dp"
+                android:layout_marginEnd="25sp"
+                android:layout_marginBottom="10dp"
+                android:fillViewport="true"
+                android:scrollbars="none"
+
+                >
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="115dp"
+                        android:layout_marginStart="0sp"
+                        android:src="@drawable/chernobyl" />
+
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="115dp"
+                        android:layout_marginStart="0sp"
+                        android:src="@drawable/aliceinborderland" />
+
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="115dp"
+                        android:src="@drawable/emilyenparis" />
+
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="115dp"
+                        android:src="@drawable/thewillms" />
+
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="115dp"
+                        android:src="@drawable/mosaic" />
+
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="115dp"
+                        android:src="@drawable/padredefamilia" />
+
+                </LinearLayout>
+            </HorizontalScrollView>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25sp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="5dp"
+                android:fontFamily="sans-serif-medium"
+                android:text="Series recomendadas"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="110sp"
+                android:layout_marginStart="25sp"
+                android:layout_marginTop="0dp"
+                android:layout_marginEnd="25sp"
+                android:layout_marginBottom="10dp"
+                android:fillViewport="true"
+                android:scrollbars="none"
+
+                >
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="115dp"
+                        android:layout_marginStart="0sp"
+                        android:src="@drawable/aqnhqv" />
+
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="115dp"
+                        android:layout_marginStart="0sp"
+                        android:src="@drawable/CCAVM" />
+
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="115dp"
+                        android:src="@drawable/elpueblo" />
+
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="115dp"
+                        android:src="@drawable/avatar1" />
+
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="115dp"
+                        android:src="@drawable/futurama" />
+
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="115dp"
+                        android:src="@drawable/losSimpsons" />
+
+                </LinearLayout>
+            </HorizontalScrollView>
+
+
+        </LinearLayout>
 
 
     </ScrollView>
