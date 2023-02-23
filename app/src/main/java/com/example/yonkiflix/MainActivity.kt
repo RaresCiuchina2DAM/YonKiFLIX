@@ -19,14 +19,14 @@ class MainActivity : AppCompatActivity() {
 
         binding.botonimagen1.setOnClickListener {
             val intent = Intent(this, LibretaActivity::class.java)
-            intent.putExtra("usuario",binding.Nombreusuario1.text.toString())
+            intent.putExtra("usuario",binding.botonimagen1.background.toString())
 
             startActivity(intent)
         }
 
         binding.botonimagen2.setOnClickListener {
             val intent = Intent(this, LibretaActivity::class.java)
-            intent.putExtra("usuario",binding.nombreusuario2.text.toString())
+            intent.putExtra("usuario",binding.botonimagen2.background.toString())
             startActivity(intent)
         }
 
