@@ -15,7 +15,7 @@ class LoginActivity : AppCompatActivity() {
         setContentView(binding.root)
 
 
-        //Iniciar sesión
+        //Iniciar sesión si está registrqado en firebase
 
         binding.InicioSesion.setOnClickListener {
             if (binding.Email.text.toString().isNotEmpty() &&
@@ -38,13 +38,14 @@ class LoginActivity : AppCompatActivity() {
             }
         }
 
-
+        //si no tienes cuenta, te lleva a la pantalla de registro
         binding.notienescuenta.setOnClickListener {
             val intent = Intent(this, RegistroActivity::class.java)
             startActivity(intent)
             finish()
         }
 
+        // si quieres saber por qué existimos, te lleva a la pantalla de por qué existimos
         binding.porqueexistimos.setOnClickListener {
             val intent = Intent(this, xqexistimosActivity::class.java)
             startActivity(intent)

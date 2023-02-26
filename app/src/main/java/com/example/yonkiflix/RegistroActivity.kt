@@ -14,12 +14,13 @@ class RegistroActivity : AppCompatActivity() {
         setContentView(binding.root)
 
 
-
+        //si pulsas en los términos y condiciones, te lleva a la pantalla de términos y condiiciones personalizada
         binding.terminosycondiciones.setOnClickListener{
             val intent = Intent(this, TerminosActivity::class.java)
             startActivity(intent)
         }
 
+        //si pulsas en el botón de volver, te lleva a la pantalla de login
         binding.volver.setOnClickListener {
             val intent = Intent(this, LoginActivity::class.java)
             startActivity(intent)
@@ -27,6 +28,8 @@ class RegistroActivity : AppCompatActivity() {
         }
 
 
+        //si pulsas en el botón de registrarse, empieza a registrar al usuario en firebase y
+        // además debe de aceptar los terminos y condiciones para que le deje registrarse
         binding.botonregistro.setOnClickListener {
 
             if (binding.introduceemail.text.toString().isNotEmpty() &&
