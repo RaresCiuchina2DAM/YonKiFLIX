@@ -79,16 +79,18 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent">
+
                     <TextView
                         android:id="@+id/btnSeriesTv"
-                        android:layout_width="121dp"
-                        android:layout_height="49dp"
+                        android:layout_width="123dp"
+                        android:layout_height="42dp"
                         android:layout_marginStart="26dp"
                         android:layout_marginTop="2dp"
                         android:layout_marginBottom="328dp"
                         android:background="@android:color/transparent"
                         android:fontFamily="times"
                         android:gravity="center"
+                        android:inputType="text"
                         android:text="Series TV"
                         android:textColor="@color/white"
                         android:textSize="15sp"
@@ -106,6 +108,7 @@
                         android:background="@android:color/transparent"
                         android:fontFamily="times"
                         android:gravity="center"
+                        android:inputType="text"
                         android:text="Peliculas"
                         android:textColor="@color/white"
                         app:layout_constraintBottom_toTopOf="@+id/botonprincipalreproducir"

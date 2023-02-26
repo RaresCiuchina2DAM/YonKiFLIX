@@ -38,19 +38,6 @@ class LoginActivity : AppCompatActivity() {
             }
         }
 
-        //si no tienes cuenta, te lleva a la pantalla de registro
-        binding.notienescuenta.setOnClickListener {
-            val intent = Intent(this, RegistroActivity::class.java)
-            startActivity(intent)
-            finish()
-        }
-
-        // si quieres saber por qué existimos, te lleva a la pantalla de por qué existimos
-        binding.porqueexistimos.setOnClickListener {
-            val intent = Intent(this, xqexistimosActivity::class.java)
-            startActivity(intent)
-            finish()
-        }
     }
 
 }

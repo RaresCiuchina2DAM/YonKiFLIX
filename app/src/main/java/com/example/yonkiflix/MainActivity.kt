@@ -17,12 +17,8 @@ class MainActivity : AppCompatActivity() {
 
         binding.Nombreusuario1.text = email2
 
-        val imagendeusuario = Array<Int>(init = {0}, size = 1)
+        val imagendeusuario = arrayOf(R.drawable.perfil1, R.drawable.perfil2, R.drawable.perfil3, R.drawable.perfil4)
 
-        imagendeusuario[0]=R.drawable.perfil1
-        imagendeusuario[1]=R.drawable.perfil2
-        imagendeusuario[2]=R.drawable.perfil3
-        imagendeusuario[3]=R.drawable.perfil4
 
         val random = (imagendeusuario.indices).random()
 
@@ -31,7 +27,7 @@ class MainActivity : AppCompatActivity() {
 
         binding.botonimagen1.setOnClickListener {
             val intent = Intent(this, LibretaActivity::class.java)
-            intent.putExtra("usuario",binding.botonimagen1.background.toString())
+//            intent.putExtra("usuario",random)
 
             startActivity(intent)
         }

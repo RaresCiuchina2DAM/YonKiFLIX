@@ -11,17 +11,18 @@ class LibretaActivity : AppCompatActivity() {
         val binding = ActivityLibretaBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        val usuario = intent.getStringExtra("usuario").toString()
-
-        if (usuario == R.drawable.perfil1.toString()) {
-            binding.perfil.setImageResource(R.drawable.perfil1)
-        } else if (usuario == R.drawable.perfil2.toString()) {
-            binding.perfil.setImageResource(R.drawable.perfil2)
-        } else if (usuario == R.drawable.perfil3.toString()) {
-            binding.perfil.setImageResource(R.drawable.perfil3)
-        } else if (usuario == R.drawable.perfil4.toString()) {
-            binding.perfil.setImageResource(R.drawable.perfil4)
-        }
+//        val random = intent.getStringExtra("usuario").toString()
+//
+//
+//        if (1 == random.toInt()) {
+//            binding.perfil.setImageResource(R.drawable.perfil1)
+//        } else if (2 == random.toInt()) {
+//            binding.perfil.setImageResource(R.drawable.perfil2)
+//        } else if (3 == random.toInt()) {
+//            binding.perfil.setImageResource(R.drawable.perfil3)
+//        } else if (0== random.toInt())   {
+//            binding.perfil.setImageResource(R.drawable.perfil4)
+//        }
 
         binding.btnPeliculas.setOnClickListener {
             val intent = Intent(this, PeliculasActivity::class.java)
