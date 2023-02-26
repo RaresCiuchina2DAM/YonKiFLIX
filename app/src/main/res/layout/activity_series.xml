@@ -56,7 +56,6 @@
             android:src="@drawable/aqnhqv" />
 
 
-        <!--    Boton fecha derea y boton fecha izquierda  con boton en el centro de entrar dentro de un tableLayout-->
 
 
         <TableLayout
